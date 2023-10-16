@@ -4,8 +4,8 @@
   "description": "TAF for ATM",
   "main": "index.js",
   "scripts": {
-    "test": "ts-node --project tsconfig.json node_modules/@qavajs/cli/bin/qavajs.js run --config config.ts",
-    "debug": "ts-node --project tsconfig.json node_modules/@qavajs/cli/bin/qavajs.js run --config config.ts --tags @debug"
+    "test": "qavajs run --config config.ts",
+    "debug": "qavajs run --config config.ts --tags @debug"
   },
   "repository": {
     "type": "git",
