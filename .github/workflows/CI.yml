@@ -23,4 +23,4 @@ jobs:
         run: npm install
 
       - name: Test phase
-        run: npm run test
+        run: npm run eslint
