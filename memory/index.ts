@@ -1,5 +1,5 @@
-import web from './web';
-import local from './local';
+import web from './envs/web';
+import local from './envs/local';
 const env = process.env.ENV;
 
 const envs = {

@@ -1,2 +1,6 @@
 node_modules/
 report/
+/test-results/
+/playwright-report/
+/playwright/.cache/
+.env
