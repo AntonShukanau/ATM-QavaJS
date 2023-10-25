@@ -1,16 +1,13 @@
 import { test, expect } from '@playwright/test';
 import { po } from '@qavajs/po-playwright';
-import PoMap from '../page_object';
 import memory from '@qavajs/memory';
-import MemoryMap from '../memory';
 import functions from '../memory/functions';
+import { memoryRegister, poRegister } from '../support/playwright-utils/playwright-utils';
 
 // All of these hooks could be splitted to a different custom methods. NOTE: it's an example
 test.beforeEach(async ({ page }) => {
-  // @ts-ignore
-  memory.register(new MemoryMap());
-  po.init(page, { timeout: 10000 });
-  po.register(new PoMap());
+  await memoryRegister();
+  await poRegister(page);
   const urlValue = await memory.getValue('{$url}/ui/#superadmin_personal/launches/all');
   await page.goto(urlValue);
 })
