@@ -6,7 +6,7 @@ export default {
   defaultTimeout: 120000,
   parallel: 4,
   paths: ["features/**/*.feature"],
-  require: ["step_definition/*.ts","node_modules/@qavajs/steps-playwright/index.js","node_modules/@qavajs/steps-memory/index.js"],
+  require: ["step_definition/*.ts","node_modules/@qavajs/steps-playwright/index.js","node_modules/@qavajs/steps-memory/index.js", 'node_modules/@qavajs/steps-api/index.js'],
   requireModule: ["@qavajs/template"],
   format: ["@qavajs/console-formatter","@qavajs/html-formatter:report/report.html"],
   // @ts-ignore
