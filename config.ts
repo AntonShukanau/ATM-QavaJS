@@ -6,9 +6,10 @@ export default {
   defaultTimeout: 120000,
   parallel: 4,
   paths: ["features/**/*.feature"],
-  require: ["step_definition/*.ts","node_modules/@qavajs/steps-playwright/index.js","node_modules/@qavajs/steps-memory/index.js", 'node_modules/@qavajs/steps-api/index.js'],
+  require: ["step_definition/*.ts", "node_modules/@qavajs/steps-playwright/index.js", "node_modules/@qavajs/steps-memory/index.js", 'node_modules/@qavajs/steps-api/index.js'],
   requireModule: ["@qavajs/template"],
-  format: ["@qavajs/console-formatter","@qavajs/html-formatter:report/report.html"],
+  format: ["@qavajs/console-formatter", "@qavajs/html-formatter:report/report.html"],
+  //formatOptions: { console: { showLogs: true } },
   // @ts-ignore
   memory: new Memory(),
   pageObject: new App(),
@@ -16,7 +17,7 @@ export default {
     capabilities: {
       browserName: "chromium",
       //channel: 'chrome',
-      headless: true,
+      headless: false,
       viewport: { height: 720, width: 1366 }
     },
     timeout: {
