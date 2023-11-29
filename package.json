@@ -26,6 +26,7 @@
     "@qavajs/html-formatter": "^0.14.3",
     "@qavajs/memory": "^1.6.2",
     "@qavajs/po-playwright": "^0.11.1",
+    "@qavajs/steps-api": "^0.17.0",
     "@qavajs/steps-memory": "^0.13.0",
     "@qavajs/steps-playwright": "^0.36.0",
     "@qavajs/template": "^0.8.2",
