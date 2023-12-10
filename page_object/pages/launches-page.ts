@@ -9,6 +9,7 @@ export default class LaunchesPage extends Component {
 
 class PageHeader extends Component {
   SelectAll = $('div[class*=checkIcon]');
+  StartTime = $('div[class*="sorting-active"]');
 }
 
 class ActionsDropdown extends Component {

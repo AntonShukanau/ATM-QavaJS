@@ -1,6 +1,6 @@
+require('dotenv').config();
 import Memory from "./memory";
 import App from "./page_object";
-require('dotenv').config();
 
 export default {
   defaultTimeout: 120000,
