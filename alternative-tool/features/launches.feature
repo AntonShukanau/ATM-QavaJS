@@ -2,7 +2,6 @@ Feature: Launches Page
   
   Background:
     Given I login to RP
-    And I wait 3000 ms
     When I open '{$url}/ui/#anton_shukanau_personal/launches/all' url
 
   Scenario Outline: user is able to move to appropriate launch view clicking on Launch name/total/passed/failed/skipped/to investigate places
