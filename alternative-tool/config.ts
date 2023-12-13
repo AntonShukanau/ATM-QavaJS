@@ -19,8 +19,8 @@ export default {
     hostname: 'hub.browserstack.com',
     path: '/wd/hub',
     logLevel: 'debug',
-    user: "bsuser_nXbBjN",
-    key: 'dDHzqqqBsoBv1jHJLsB6',
+    user: process.env.BS_USER,
+    key: process.env.BS_KEY,
     port: 443,
     timeout: {
       present: 5000
