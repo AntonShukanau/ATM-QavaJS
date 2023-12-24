@@ -1,3 +1,4 @@
+@api
 Feature: API test feature
 
   # QavaJS API client library based on fetch()

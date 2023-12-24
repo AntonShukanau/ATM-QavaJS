@@ -1,8 +1,9 @@
+@ui
 Feature: Launches Page
   
   Background:
-    Given I open '{$url}/ui/#superadmin_personal/launches/all' url
-      And I login to RP
+    Given I login to RP
+    When I open '{$url}/ui/#anton_shukanau_personal/launches/all' url
 
   Scenario Outline: user is able to move to appropriate launch view clicking on Launch name/total/passed/failed/skipped/to investigate places
     When I wait until 'Launches Page > #4 of Launches > Title' to be visible
@@ -43,12 +44,12 @@ Feature: Launches Page
     Then I expect text of 'Compare Modal > Title' to be equal 'COMPARE LAUNCHES'
 
   # this test should be skipped for (logic for uploading demo data is not correct, request is working in browser console, but the time is not appropriate)
-  Scenario: user is able to remove launch(es)
-    When I click 'Launches Page > Page Header > Select All'
-      And I click 'Launches Page > Actions Dropdown'
-      And I click 'Launches Page > Actions Dropdown > #Delete in Options'
-      And I wait until 'Delete Modal' to be visible
-      And I click 'Delete Modal > Delete Button'
-      And I wait until 'Launches Page > No Item Message' to be visible
-    Then I expect text of 'Launches Page > No Item Message' to be equal 'No results found'
+  # Scenario: user is able to remove launch(es)
+  #   When I click 'Launches Page > Page Header > Select All'
+  #     And I click 'Launches Page > Actions Dropdown'
+  #     And I click 'Launches Page > Actions Dropdown > #Delete in Options'
+  #     And I wait until 'Delete Modal' to be visible
+  #     And I click 'Delete Modal > Delete Button'
+  #     And I wait until 'Launches Page > No Item Message' to be visible
+  #   Then I expect text of 'Launches Page > No Item Message' to be equal 'No results found'
 

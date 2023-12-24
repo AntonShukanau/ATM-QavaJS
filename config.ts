@@ -17,7 +17,7 @@ export default {
     capabilities: {
       browserName: "chromium",
       //channel: 'chrome',
-      headless: false,
+      headless: true,
       viewport: { height: 720, width: 1366 }
     },
     timeout: {

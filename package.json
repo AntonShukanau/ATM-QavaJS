@@ -4,7 +4,7 @@
   "description": "TAF for ATM",
   "main": "index.js",
   "scripts": {
-    "test": "qavajs run --config config.ts",
+    "test:api": "qavajs run --config config.ts --tags @api",
     "debug": "qavajs run --config config.ts --tags @debug",
     "eslint": "npx eslint --ext .ts",
     "pw:test": "npx playwright test"
@@ -21,14 +21,14 @@
   "homepage": "https://github.com/AntonShukanau/ATM-QavaJS#readme",
   "dependencies": {
     "@cucumber/cucumber": "^10.0.0",
-    "@qavajs/cli": "^0.30.1",
+    "@qavajs/cli": "^0.33.0",
     "@qavajs/console-formatter": "^0.6.0",
     "@qavajs/html-formatter": "^0.14.3",
     "@qavajs/memory": "^1.6.2",
-    "@qavajs/po-playwright": "^0.11.1",
+    "@qavajs/po-playwright": "^0.12.0",
     "@qavajs/steps-api": "^0.17.0",
     "@qavajs/steps-memory": "^0.13.0",
-    "@qavajs/steps-playwright": "^0.36.0",
+    "@qavajs/steps-playwright": "^0.42.0",
     "@qavajs/template": "^0.8.2",
     "dotenv": "^16.3.1",
     "ts-node": "^10.9.1"
