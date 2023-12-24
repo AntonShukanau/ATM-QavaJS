@@ -1,0 +1,24 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('Clone repository') {
+            steps {
+                git branch: 'module9', credentialsId: 'GITHUB_TOKEN', url: 'https://github.com/AntonShukanau/ATM-QavaJS.git'
+            }
+        }
+        
+        stage('Installing dependencies') {
+            steps {
+                bat 'npm install'
+            }
+        }
+
+        stage('Run tests') {
+            steps {
+                bat 'npm run test:api'
+            }
+        }
+    }
+}
+
