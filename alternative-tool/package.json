@@ -1,0 +1,29 @@
+{
+  "name": "alternative-tool",
+  "version": "1.0.0",
+  "description": "Alternative webdriver-based tool for Automation Testing Mentoring Program",
+  "main": "index.js",
+  "scripts": {
+    "test": "qavajs run --config config.ts",
+    "debug": "qavajs run --config config.ts --tags @debug"
+  },
+  "author": "Anton Shukanau",
+  "license": "ISC",
+  "dependencies": {
+    "@cucumber/cucumber": "^10.0.1",
+    "@qavajs/cli": "^0.32.1",
+    "@qavajs/console-formatter": "^0.6.0",
+    "@qavajs/html-formatter": "^0.15.2",
+    "@qavajs/memory": "^1.6.2",
+    "@qavajs/po": "^1.8.0",
+    "@qavajs/steps-memory": "^0.13.0",
+    "@qavajs/steps-wdio": "^0.44.0",
+    "@qavajs/template": "^0.8.2",
+    "@qavajs/wdio-service-adapter": "^0.0.3",
+    "dotenv": "^16.3.1",
+    "ts-node": "^10.9.2"
+  },
+  "devDependencies": {
+    "@wdio/browserstack-service": "^8.26.0"
+  }
+}
