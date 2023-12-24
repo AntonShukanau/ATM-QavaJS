@@ -4,13 +4,19 @@ pipeline {
     stages {
         stage('Clone repository') {
             steps {
-                git branch: 'module9', credentialsId: 'GITHUB_TOKEN', url: 'https://github.com/AntonShukanau/ATM-QavaJS.git'
+                git branch: 'main', credentialsId: 'GITHUB_TOKEN', url: 'https://github.com/AntonShukanau/ATM-QavaJS.git'
             }
         }
         
         stage('Installing dependencies') {
             steps {
                 bat 'npm install'
+            }
+        }
+
+        stage('Browser install') {
+            steps {
+                bat 'npx playwright install'
             }
         }
 
