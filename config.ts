@@ -9,7 +9,23 @@ export default {
   require: ["step_definition/*.ts", "node_modules/@qavajs/steps-playwright/index.js", "node_modules/@qavajs/steps-memory/index.js", 'node_modules/@qavajs/steps-api/index.js'],
   requireModule: ["@qavajs/template"],
   format: ["@qavajs/console-formatter", "@qavajs/html-formatter:report/report.html"],
-  //formatOptions: { console: { showLogs: true } },
+  formatOptions: {
+    rpConfig: {
+      enable: true,
+      debug: false,
+      apiKey: process.env.TOKEN,
+      endpoint: 'http://reportportal.epam.com/api/v2',
+      description: 'Description',
+      tags: ['Tag'],
+      project: 'anton_shukanau_personal',
+      launch: 'Automation Testing Mentoring',
+      mode: 'DEFAULT',
+      retry: 1,
+      ignoreErrors: false, 
+      showLaunchURL: true, 
+      tagsAsAttributes: true
+    },
+  },
   // @ts-ignore
   memory: new Memory(),
   pageObject: new App(),
