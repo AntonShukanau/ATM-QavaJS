@@ -18,7 +18,7 @@ export default {
       description: 'Description',
       tags: ['Tag'],
       project: 'anton_shukanau_personal',
-      launch: 'Test Automation Testing Mentoring',
+      launch: 'Automation Testing Mentoring',
       mode: 'DEFAULT',
       retry: 1,
       ignoreErrors: false, 
